@@ -144,7 +144,7 @@ En este caso podemos comprobar que no es posible su eliminación porque hay un c
 
 ![image-20250214090643922](./EJERCICIO 2 - SERVIDOR DE BASE DE DATOS.assets/image-20250214090643922.png)
 
-Borramos todo, volumen, imagen y contenedor.
+Borramos todo, volumen, imagen y contenedor. Para ello deberemos seguir el siguiente orden, ya que si no, no te dejaría eliminar la imagen de mariadb, puesto que te saldría que está en uso.
 
 - Eliminamos el contenedor `bbdd-2` en **Docker Desktop**:
 
@@ -157,3 +157,4 @@ Borramos todo, volumen, imagen y contenedor.
 
 ![image-20250214091233479](./EJERCICIO 2 - SERVIDOR DE BASE DE DATOS.assets/image-20250214091233479.png)
 
+![image-20250214094538600](./EJERCICIO 2 - SERVIDOR DE BASE DE DATOS.assets/image-20250214094538600.png)
