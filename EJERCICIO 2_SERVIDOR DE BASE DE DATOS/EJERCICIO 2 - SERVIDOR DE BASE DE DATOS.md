@@ -2,19 +2,21 @@
 
 > Realizado por Andrea Gómez Fueyo y Sandra Rujas
 
-### **EJERCICIO 2 - Servidor de base de datos**
+[TOC]
+
+### 1. Descarga de imagen.
 
 Abre Docker Desktop. Busca mariadb en la sección de imágenes. Selecciona la imagen oficial. Descárgala si no la tienes.
 
 - Si no puedes iniciar sesión, la imagen puedes descargarla mediante comandos.
 
 ```bash
-docker pull mariadb:latest
+$docker pull mariadb:latest
 ```
 
-![image-20250214091505222](./EJERCICIO 2 - SERVIDOR DE BASE DE DATOS.assets/image-20250214091505222.png)
+![image (1)](./EJERCICIO 2 - SERVIDOR DE BASE DE DATOS.assets/image (1).png)
 
-![image-20250214091546138](./EJERCICIO 2 - SERVIDOR DE BASE DE DATOS.assets/image-20250214091546138.png)
+![image (2)](./EJERCICIO 2 - SERVIDOR DE BASE DE DATOS.assets/image (2).png)
 
 - Si puedes acceder a la búsqueda de imagen, entras en *“Images”*, buscas la última de maridb y pulsas pull para descargarla.
 
@@ -29,6 +31,8 @@ docker pull mariadb:latest
 ![image-20250214085246315](./EJERCICIO 2 - SERVIDOR DE BASE DE DATOS.assets/image-20250214085246315.png)
 
 ![image-20250214085316015](./EJERCICIO 2 - SERVIDOR DE BASE DE DATOS.assets/image-20250214085316015.png)
+
+### 2. Despliegue de contenedor.
 
 Al cual le tenemos que poner las siguientes **características**:
 
@@ -49,6 +53,10 @@ Al cual le tenemos que poner las siguientes **características**:
 Una vez pulsado el RUN, nos vamos a la sección de contenedores para comprobar que finalmente se haya creado:
 
 ![image-20250214085524094](./EJERCICIO 2 - SERVIDOR DE BASE DE DATOS.assets/image-20250214085524094.png)
+
+<div style="page-break-after: always; break-after: page;"></div>
+
+### 3. Acceso a la base de datos.
 
 Accede a la base de datos usando una herramienta gráfica, como, por ejemplo dbeaver . Conéctate con el usuario daw . Crea una base de datos y alguna tabla.
 
@@ -94,6 +102,8 @@ Comprobamos la creación de la tabla:
 
 ![image-20250214085953457](./EJERCICIO 2 - SERVIDOR DE BASE DE DATOS.assets/image-20250214085953457.png)
 
+### 4. Borrado del contenedor.
+
 Una vez creada la tabla, intentamos borrar el contenedor:
 
 - Vamos a la pestaña **"Containers"** y buscamos el contenedor bbdd:
@@ -108,6 +118,8 @@ Una vez creada la tabla, intentamos borrar el contenedor:
 
 ![image-20250214090245481](./EJERCICIO 2 - SERVIDOR DE BASE DE DATOS.assets/image-20250214090245481.png)
 
+### 5. Comprobación de la existencia de datos.
+
 Vemos como en Docker Desktop el volumen que contiene los datos no se ha borrado:
 
 - Vamos a la pestaña **"Volumes"** en Docker Desktop. Buscamos datos-mariadb y verificar que sigue ahí:
@@ -115,6 +127,8 @@ Vemos como en Docker Desktop el volumen que contiene los datos no se ha borrado:
 ![image-20250214090324805](./EJERCICIO 2 - SERVIDOR DE BASE DE DATOS.assets/image-20250214090324805.png)
 
 
+
+### 6. Creación de nuevo contenedor.
 
 Creamos otro contenedor con un servidor de base de datos que use el mismo volumen:
 
@@ -124,6 +138,8 @@ Creamos otro contenedor con un servidor de base de datos que use el mismo volume
 
 ![image-20250214090418539](./EJERCICIO 2 - SERVIDOR DE BASE DE DATOS.assets/image-20250214090418539.png)
 
+### 7. Comprobación de la existencia de la tabla en la base de datos.
+
 Volvemos a **DBeaver** y creamos una nueva conexión a bbdd-2:
 
 ![image-20250214090442422](./EJERCICIO 2 - SERVIDOR DE BASE DE DATOS.assets/image-20250214090442422.png)
@@ -131,6 +147,8 @@ Volvemos a **DBeaver** y creamos una nueva conexión a bbdd-2:
 Tras darle al botón de ‘Finalizar’, en la columna de la izquierda, podemos comprobar, que efectivamente, se ha creado una nueva conexión, que mantiene los datos que hemos introducido en el ejercicio anterior, es decir, la tabla de **usuarios** con sus correspondientes **columnas**:
 
 ![image-20250214090534361](./EJERCICIO 2 - SERVIDOR DE BASE DE DATOS.assets/image-20250214090534361.png)
+
+### 8. Eliminación de imagen.
 
 Seguidamente, vamos la pestaña de **“Images”** en Docker Desktop y buscamos mariadb e intentamos eliminarla:
 
@@ -143,6 +161,8 @@ Seguidamente, vamos la pestaña de **“Images”** en Docker Desktop y buscamos
 En este caso podemos comprobar que no es posible su eliminación porque hay un contenedor en ejecución.
 
 ![image-20250214090643922](./EJERCICIO 2 - SERVIDOR DE BASE DE DATOS.assets/image-20250214090643922.png)
+
+### 9. Eliminación de volumen, imagen y contenedor.
 
 Borramos todo, volumen, imagen y contenedor. Para ello deberemos seguir el siguiente orden, ya que si no, no te dejaría eliminar la imagen de mariadb, puesto que te saldría que está en uso.
 
