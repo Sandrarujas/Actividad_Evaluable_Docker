@@ -1,0 +1,8 @@
+version: '3'
+services:
+  htop:
+    image: ubuntu:latest
+    container_name: htop-container
+    tty: true
+    stdin_open: true
+    command: bash -c "apt update && apt install -y htop && htop"  
