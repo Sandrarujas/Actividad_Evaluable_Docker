@@ -1,5 +1,7 @@
 # Ejercicio 5 - imagen con Dockerfile
 
+#### PARTE I. ARRANQUE Y AUTOMATIZACIÓN DE IMAGEN EN DOCKERFILE
+
 En este apartado se nos pide arrancar un contenedor que ejecute una instancia de la imagen php:7.4-apache , que se llame web y que sea accesible desde un navegador en el puerto 8000, en nuestro caso, 8800.
 
 ```bash
@@ -144,3 +146,58 @@ $ docker run -d --name web_andrea -p 8800:80 web_andreaysandra
 ![imagendocker_Andrea](./Ejercicio 5 - imagen con Dockerfile.assets/imagendocker_Andrea-1740054020559-30.png)
 
 ![imagenweb_dockerdesktopandrea](./Ejercicio 5 - imagen con Dockerfile.assets/imagenweb_dockerdesktopandrea-1740054035187-33.png)
+
+#### PARTE II. DESCARGA DE IMAGEN Y CREACIÓN DEL CONTENEDOR
+
+El siguiente paso es la descarga de la imagen y la creación del contenedor con dicha imagen. Para ello, hemos seguido los siguientes pasos:
+
+Actualizamos el repositorio con los cambios realizados para descargarnos la imagen creada por nuestro compañero/a:
+
+```bash
+$git pull origin main
+```
+
+![descarga_de_imagen](./Ejercicio 5 - imagen con Dockerfile.assets/descarga_de_imagen.png)
+
+Construimos la imagen docker:
+
+```bash
+$docker build -t web_andreaysandra .
+```
+
+![Construccion_imagen_condockerfile](./Ejercicio 5 - imagen con Dockerfile.assets/Construccion_imagen_condockerfile.png)
+
+El `.` indica que el `Dockerfile` se encuentra en la carpeta actual. Docker leerá el `Dockerfile` y construirá la imagen con el nombre `web_andreaysandra`.
+
+Para asegurarnos de que la imagen se construyó correctamente, listamos las imágenes disponibles ejecutando el siguiente comando:
+
+![image-20250220182328190](./Ejercicio 5 - imagen con Dockerfile.assets/image-20250220182328190.png)
+
+Una vez tenemos tienes la imagen construida,  ejecutamos un nuevo contenedor con el siguiente comando:
+
+```bash
+$docker run -d --name web_andrea -p 8800:80 web_andreaysandra
+```
+
+![image-20250220182513642](./Ejercicio 5 - imagen con Dockerfile.assets/image-20250220182513642.png)
+
+Para asegurarnos de que el contenedor está en funcionamiento, lo verificamos con el siguiente comando:
+
+```bash
+$docker ps
+```
+
+![image-20250220182628354](./Ejercicio 5 - imagen con Dockerfile.assets/image-20250220182628354.png)
+
+Podemos abrir nuestra aplicación de Docker Deskstop para comprobar que hemos creado correctamente el contenedor:
+
+![image-20250220183037762](./Ejercicio 5 - imagen con Dockerfile.assets/image-20250220183037762.png)
+
+Para comprobar que los pasos han sido correctos, abrimos un navegador y pegamos la siguiente url:
+
+- http://localhost:8800/
+
+Resultado del acceso al navegador:
+
+![navegador_sitio_servido](./Ejercicio 5 - imagen con Dockerfile.assets/navegador_sitio_servido.png)
+
