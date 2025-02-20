@@ -37,7 +37,7 @@ En cuanto al desarrollo de tareas, el reparto ha sido de la siguiente forma:
 
 - **Ejercicio 3 - Contenedores en red:** Andrea Gómez Fueyo
 
-- **Ejercicio 4 - Docker Compose:** Sandra Rujas Arroyo
+- **Ejercicio 4 - Docker Compose:** Andrea Gómez Fueyo
 
 - **Ejercicio 5 - Imagen con Dockerfile - Aplicación web:** Andrea Gómez Fueyo y  Sandra Rujas Arroyo 
 
