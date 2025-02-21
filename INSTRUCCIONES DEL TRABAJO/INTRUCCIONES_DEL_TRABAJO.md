@@ -46,3 +46,5 @@ En este caso, para el desarrollo de las tareas, no hemos definido un plazo concr
 **Resultado final:** se puede encontrar en el repositorio añadido en el punto de *"Enlace al repositorio"* . Se explicará de manera detallada en la exposición.
 
 **Mayores dificultades:** leves faltas de comunicación en una de las tareas, pero por lo demás, cada una ha realizado su trabajo de manera satisfactoria. 
+
+**Beneficios de trabajar en grupo:** Trabajar en pareja tiene muchas ventajas en comparación con hacerlo solo. Al colaborar con otra persona, podemos combinar nuestras habilidades y conocimientos, lo que nos ayuda a ser más creativos y resolver problemas de manera más eficiente. Además, dividir las tareas permite que el trabajo sea más rápido y menos pesado para cada uno. También es útil recibir retroalimentación inmediata, ya que esto nos ayuda a corregir errores y mejorar la calidad del resultado final. Otro beneficio importante es el apoyo mutuo, que reduce el estrés y aumenta la motivación. En general, trabajar en pareja mejora la comunicación, el aprendizaje y nos permite obtener mejores resultados.
