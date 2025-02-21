@@ -1,5 +1,7 @@
 # Ejercicio 5 - imagen con Dockerfile
 
+[TOC]
+
 #### PARTE I. ARRANQUE Y AUTOMATIZACIÓN DE IMAGEN EN DOCKERFILE
 
 En este apartado se nos pide arrancar un contenedor que ejecute una instancia de la imagen php:7.4-apache , que se llame web y que sea accesible desde un navegador en el puerto 8000, en nuestro caso, 8800.
@@ -137,13 +139,7 @@ $ docker build -t web_andreaysandra .
 
 ![imagen_docker](./Ejercicio 5 - imagen con Dockerfile.assets/imagen_docker-1740053648536-27.png)
 
-Con la imagen ya creada y automatizada, podemos ejecutar nuestros propios contenedores:
 
-```bash
-$ docker run -d --name web_andrea -p 8800:80 web_andreaysandra
-```
-
-![imagendocker_Andrea](./Ejercicio 5 - imagen con Dockerfile.assets/imagendocker_Andrea-1740054020559-30.png)
 
 ![imagenweb_dockerdesktopandrea](./Ejercicio 5 - imagen con Dockerfile.assets/imagenweb_dockerdesktopandrea-1740054035187-33.png)
 
@@ -159,17 +155,11 @@ $git pull origin main
 
 ![descarga_de_imagen](./Ejercicio 5 - imagen con Dockerfile.assets/descarga_de_imagen.png)
 
-Construimos la imagen docker:
+Para asegurarnos de que la imagen se construyó correctamente, listamos las imágenes disponibles ejecutando el siguiente comando:
 
 ```bash
-$docker build -t web_andreaysandra .
+$docker images
 ```
-
-![Construccion_imagen_condockerfile](./Ejercicio 5 - imagen con Dockerfile.assets/Construccion_imagen_condockerfile.png)
-
-El `.` indica que el `Dockerfile` se encuentra en la carpeta actual. Docker leerá el `Dockerfile` y construirá la imagen con el nombre `web_andreaysandra`.
-
-Para asegurarnos de que la imagen se construyó correctamente, listamos las imágenes disponibles ejecutando el siguiente comando:
 
 ![image-20250220182328190](./Ejercicio 5 - imagen con Dockerfile.assets/image-20250220182328190.png)
 
