@@ -4,6 +4,10 @@
 
 En esta actividad se nos pide desplegar la aplicación htop utilizando docker-compose.
 
+**`htop`** es una herramienta de monitoreo interactivo de procesos para sistemas Linux/Unix. Se utiliza como interfaz visual y destaca por su fácil uso para ver los procesos en ejecución, el uso de la CPU, la memoria y otras estadísticas del sistema. A diferencia de otros comandos como `top`, **`htop`** permite una navegación más sencilla a través de los procesos y permite realizar acciones como matar procesos directamente desde su interfaz.
+
+En esta tarea, vamos a ejecutar `**htop**` dentro de un contenedor Docker a través de Docker Compose para facilitar el despliegue.
+
 En primer lugar, creamos el archivo a través de comandos y comprobamos que se creó sin problema:
 
 ![crear_archivo](./Ejercicio 4 - Docker compose.assets/crear_archivo-1740039774491-2.png)
